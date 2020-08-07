@@ -1,0 +1,130 @@
+.menu-full-wrapper
+{
+	font-size: 2rem;
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 2;
+	input[type="checkbox"]
+	{
+		display: none;
+		&:checked ~ .menu-btn
+		{
+			left: 9em;
+		}
+		&:checked ~ .menu-btn > span {
+			transform: rotate(45deg);
+		}
+		&:checked ~ .menu-btn > span::before {
+			top: 0;
+			transform: rotate(0);
+		}
+		&:checked ~ .menu-btn > span::after {
+			top: 0;
+			transform: rotate(90deg);
+		}
+		&:checked ~ .menu-content-wrapper
+		{
+			left: 0;
+		}
+	}
+	.menu-content-wrapper
+	{
+		position: fixed;
+		left:-100%;
+		transition: 0.3s all ease;
+		width: 10em;
+		height: 100vh;
+		background: var(--header-bg);
+		padding: 3em 1em 0.5em 1em;
+		.menu-content
+		{
+			flex-direction: column;
+			align-items: center;
+			a,button:not(.bg-btn) {
+				font-size: 3rem;
+				color:var(--logo);
+				font-family: 'Oswald', sans-serif;
+				padding: 0;
+				transition: 0.3s all ease;
+				&:hover
+				{
+					color:var(--logo_hover_dark);
+				}
+				span{
+					font-family: sans-serif;
+					display: inline-block;
+					transform-origin: center;
+					transform: rotateZ(90deg);
+					transition: 0.3s all ease;
+					&.opened
+					{
+						transform: rotateZ(-90deg);
+					}
+				}
+			}
+		}
+		.categories-wrapper
+		{
+			max-width: 100%;
+			.categories
+			{
+				height: 0;
+				transition: all 0.5s ease-in-out;
+				overflow: hidden;
+				flex-direction: column;
+				
+				&.opened
+				{
+					height: auto;
+				}
+				a,button
+				{
+					color:var(--text-color);
+					display: inline;
+					&:hover
+					{
+						color:var(--bg);
+					}
+				}
+			}
+		}
+	}
+	.menu-btn {
+		position: fixed;
+		top: 1em;
+		left: 1em;
+		width: 2em;
+		height: 2em;
+		cursor: pointer;
+		z-index: 1;
+		background: var(--logo);
+		border-radius: 100px;
+		justify-content: center;
+		align-items: center;
+		transition: 0.2s all ease;
+		
+		& > span,
+		& > span::before,
+		& > span::after {
+			display: block;
+			position: absolute;
+			width: 70%;
+			height: 0.15em;
+			background-color: white;
+			transition: 0.2s all ease;
+		}
+		
+		& > span::before {
+			content: '';
+			top: -7px;
+			width: 100%;
+		}
+		
+		& > span::after {
+			content: '';
+			width: 100%;
+			top: 7px;
+		}
+	}
+}

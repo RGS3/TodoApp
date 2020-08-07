@@ -1,0 +1,16 @@
+.add-todo-block
+{
+	text-align: center;
+	&__btn
+	{
+		background: none;
+		font-size: 5rem;
+		color:var(--logo);
+		border: none;
+		padding: 0.06em;
+		&:hover
+		{
+			color:var(--logo_hover_dark);
+		}
+	}
+}

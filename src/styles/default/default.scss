@@ -1,0 +1,55 @@
+@import "colors";
+*
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+	transition: 0.3s background,border ease;
+}
+:root
+{
+	font-size: 10px;
+}
+body
+{
+	overflow: hidden;
+	background: var(--bg);
+}
+h1
+{
+	color:var(--logo);
+	font-family: 'Oswald', sans-serif;
+}
+a
+{
+	color:var(--logo);
+	text-decoration: none;
+	text-align: center;
+	transition: 0.3s all ease;
+	font-family: 'Oswald', sans-serif;
+	&:hover
+	{
+		color:var(--logo_hover_dark);
+	}
+}
+.App
+{
+	min-height: 100vh;
+	background: var(--bg);
+	color:var(--text-color);
+}
+.container
+{
+	max-width: 1100px;
+	padding: 0 2rem;
+	margin: 3rem auto;
+}
+.flex-container
+{
+	display: flex;
+}
+@import "inputs/inputs";
+@import "icons/icon";
+@import "buttons/buttons";
+@import "media";

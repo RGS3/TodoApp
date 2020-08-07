@@ -1,0 +1,10 @@
+@import "../default/colors";
+.header
+{
+	font-size: 3rem;
+	padding: 20px;
+	border-bottom: 0.1em solid var(--logo);
+	text-align: center;
+	user-select: none;
+	background: var(--header-bg);
+}

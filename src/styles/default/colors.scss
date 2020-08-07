@@ -1,0 +1,21 @@
+.App
+{
+	--logo:#ff3962;
+	--logo_hover_light:#e85f09;
+	--logo_hover_dark:#ad0c2e;
+	--checked:#3ee09d;
+}
+.App[data-theme="light"]
+{
+	--header-bg:#e6e6e6;
+	--bg:white;
+	--text-color:black;
+	--input-bg:#d9d9d9;
+}
+.App[data-theme="dark"]
+{
+	--header-bg:#212428;
+	--bg:#32383e;
+	--text-color:white;
+	--input-bg:#2a2e33;
+}

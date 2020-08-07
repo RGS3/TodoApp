@@ -1,0 +1,19 @@
+.icon
+{
+	width: 3rem;
+	height: 3rem;
+}
+.small-icon
+{
+	width: 2rem;
+	height: 2rem;
+}
+.animated-icon
+{
+	transition: 0.3s all ease;
+	transform-origin: center;
+	&:hover
+	{
+		transform: rotateZ(10deg) scale(1.1);
+	}
+}
